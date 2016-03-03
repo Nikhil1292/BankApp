@@ -12,6 +12,11 @@ namespace BankApp.Api.Models
         {
         }
 
+        public DbSet<AccountType> AccountType { get; set; }
+
+        public DbSet<InterestType> InterestType { get; set; }
+
+        public DbSet<User> User { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
