@@ -18,6 +18,14 @@ namespace BankApp.Api.Models
 
         public DbSet<User> User { get; set; }
 
+        public DbSet<UserDeposit> UserDeposit { get; set; }
+
+        public DbSet<Loan> Loans { get; set; }
+
+        public DbSet<LoanDeposit> LoanDeposit { get; set; }
+
+        public DbSet<BillingPeriod> BillingPeriods { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
         }

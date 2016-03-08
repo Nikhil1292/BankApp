@@ -265,11 +265,31 @@
     <Compile Include="Migrations\201603031740332_003_DDL_Add_User_Table.Designer.cs">
       <DependentUpon>201603031740332_003_DDL_Add_User_Table.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201603081150372_004_DDL_Add_UserDeposit_Table.cs" />
+    <Compile Include="Migrations\201603081150372_004_DDL_Add_UserDeposit_Table.Designer.cs">
+      <DependentUpon>201603081150372_004_DDL_Add_UserDeposit_Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603081203086_005_DDL_Add_Loan_Table.cs" />
+    <Compile Include="Migrations\201603081203086_005_DDL_Add_Loan_Table.Designer.cs">
+      <DependentUpon>201603081203086_005_DDL_Add_Loan_Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603081213254_006_DDL_Add_LoanDesposit_Table.cs" />
+    <Compile Include="Migrations\201603081213254_006_DDL_Add_LoanDesposit_Table.Designer.cs">
+      <DependentUpon>201603081213254_006_DDL_Add_LoanDesposit_Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603081221203_007_DDL_Add_BillingPeriod_Table.cs" />
+    <Compile Include="Migrations\201603081221203_007_DDL_Add_BillingPeriod_Table.Designer.cs">
+      <DependentUpon>201603081221203_007_DDL_Add_BillingPeriod_Table.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountType.cs" />
     <Compile Include="Models\BankEntities.cs" />
+    <Compile Include="Models\BillingPeriod.cs" />
     <Compile Include="Models\InterestType.cs" />
+    <Compile Include="Models\Loan.cs" />
+    <Compile Include="Models\LoanDeposit.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserDeposit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -362,6 +382,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201603031740332_003_DDL_Add_User_Table.resx">
       <DependentUpon>201603031740332_003_DDL_Add_User_Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603081150372_004_DDL_Add_UserDeposit_Table.resx">
+      <DependentUpon>201603081150372_004_DDL_Add_UserDeposit_Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603081203086_005_DDL_Add_Loan_Table.resx">
+      <DependentUpon>201603081203086_005_DDL_Add_Loan_Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603081213254_006_DDL_Add_LoanDesposit_Table.resx">
+      <DependentUpon>201603081213254_006_DDL_Add_LoanDesposit_Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603081221203_007_DDL_Add_BillingPeriod_Table.resx">
+      <DependentUpon>201603081221203_007_DDL_Add_BillingPeriod_Table.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

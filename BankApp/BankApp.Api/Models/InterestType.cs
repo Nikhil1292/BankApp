@@ -14,5 +14,7 @@ namespace BankApp.Api.Models
         public string Name { get; set; }
 
         public string Description { get; set; }
+
+        public ICollection<Loan> Loans { get; set; }
     }
 }

@@ -39,5 +39,9 @@ namespace BankApp.Api.Models
 
         public AccountType AccountType { get; set; }
 
+        public ICollection<UserDeposit> UserDeposits { get; set; }
+
+        public ICollection<Loan> Loans { get; set; }
+
     }
 }
