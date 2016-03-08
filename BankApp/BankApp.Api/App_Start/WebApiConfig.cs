@@ -25,6 +25,10 @@ namespace BankApp.Api
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            var json = config.Formatters.JsonFormatter;
+            
+            config.Formatters.Remove(config.Formatters.XmlFormatter);
         }
     }
 }
