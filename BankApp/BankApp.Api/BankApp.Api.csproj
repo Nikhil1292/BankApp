@@ -247,6 +247,7 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\API\1.0\UserController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Dtos\UserDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -281,6 +282,10 @@
     <Compile Include="Migrations\201603081221203_007_DDL_Add_BillingPeriod_Table.cs" />
     <Compile Include="Migrations\201603081221203_007_DDL_Add_BillingPeriod_Table.Designer.cs">
       <DependentUpon>201603081221203_007_DDL_Add_BillingPeriod_Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603201044205_008_DDL_Add_IsDelete_User_Table.cs" />
+    <Compile Include="Migrations\201603201044205_008_DDL_Add_IsDelete_User_Table.Designer.cs">
+      <DependentUpon>201603201044205_008_DDL_Add_IsDelete_User_Table.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountType.cs" />
@@ -395,6 +400,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201603081221203_007_DDL_Add_BillingPeriod_Table.resx">
       <DependentUpon>201603081221203_007_DDL_Add_BillingPeriod_Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603201044205_008_DDL_Add_IsDelete_User_Table.resx">
+      <DependentUpon>201603201044205_008_DDL_Add_IsDelete_User_Table.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
