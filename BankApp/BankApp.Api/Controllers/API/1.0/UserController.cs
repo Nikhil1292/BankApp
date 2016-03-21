@@ -190,7 +190,7 @@ namespace BankApp.Api.Controllers
                 // Bind return user DTO.
                 UserDto returnUser = new UserDto(userEntity)
                 {
-                    Message = USER_SUCCESS_MESSAGE
+                    Message = "User was successfully updated."
                 };
 
                 HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.Created, returnUser);
@@ -244,7 +244,7 @@ namespace BankApp.Api.Controllers
                 // Bind return user DTO.
                 UserDto returnUser = new UserDto(fullUser)
                 {
-                    Message = USER_SUCCESS_MESSAGE
+                    Message = "User was successfully deleted."
                 };
 
                 HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.Created, returnUser);
