@@ -7,7 +7,7 @@
  /// It's parent of all controller.
 
 */
-var app = angular.module('bankApp', ['ngRoute', 'ui.router']);
+var app = angular.module('bankApp', ['ngRoute', 'ui.router', 'ngMaterial']);
 app.config(['$routeProvider', '$provide', '$httpProvider', '$locationProvider', '$stateProvider', '$urlRouterProvider', function ($routeProvider, $provide, $httpProvider, $locationProvider, $stateProvider, $urlRouterProvider) {
         // By default go to the fist page i.e Home page of app.
         $urlRouterProvider.otherwise('/');
@@ -15,28 +15,28 @@ app.config(['$routeProvider', '$provide', '$httpProvider', '$locationProvider', 
             url: "/",
             views: {
                 "Content@": {
-                    templateUrl: '/home/home.html',
+                    templateUrl: '/components/home/home.html',
                 }
             }
         }).state('BankHome.DepositHome', {
             url: "Deposit",
             views: {
                 "Content@": {
-                    templateUrl: '/deposits/deposit.html',
+                    templateUrl: '/components/deposits/deposit.html',
                 }
             }
         }).state('BankHome.LoanHome', {
             url: "Loan",
             views: {
                 "Content@": {
-                    templateUrl: '/loans/loan.html',
+                    templateUrl: '/components/loans/loan.html',
                 }
             }
         }).state('BankHome.ReportHome', {
             url: "Report",
             views: {
                 "Content@": {
-                    templateUrl: '/reports/report.html',
+                    templateUrl: '/components/reports/report.html',
                 }
             }
         });
