@@ -50,10 +50,26 @@ var BankApp;
             // Setup on state chnage.
             $scope.$on("$stateChangeSuccess", function (event, toState, toParams, fromState, fromParams) {
             });
+            bankScope.onTabChange = function (selectedTab) {
+                switch (selectedTab) {
+                    case 1:
+                        $state.go("BankHome");
+                        break;
+                    case 2:
+                        $state.go("BankHome.DepositHome");
+                        break;
+                    case 3:
+                        $state.go("BankHome.LoanHome");
+                        break;
+                    case 4:
+                        $state.go("BankHome.ReportHome");
+                        break;
+                }
+            };
         }
         BankCtrl.$inject = ['$scope', '$state'];
         return BankCtrl;
-    })();
+    }());
     app.controller('BankCtrl', BankCtrl);
 })(BankApp || (BankApp = {}));
 //# sourceMappingURL=bank-app.js.map

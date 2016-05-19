@@ -9,7 +9,7 @@
 
 */
 
-var app = angular.module('bankApp', ['ngRoute', 'ui.router','ngMaterial']);
+var app = angular.module('bankApp', ['ngRoute', 'ui.router', 'ngMaterial']);
 app.config(['$routeProvider', '$provide', '$httpProvider', '$locationProvider', '$stateProvider', '$urlRouterProvider', function ($routeProvider, $provide, $httpProvider, $locationProvider, $stateProvider, $urlRouterProvider) {
 
     // By default go to the fist page i.e Home page of app.
@@ -52,18 +52,31 @@ module BankApp {
     'use strict';
     class BankCtrl {
 
-        static $inject = ['$scope','$state'];
-        constructor($scope,$state) {
+        static $inject = ['$scope', '$state'];
+        constructor($scope, $state) {
 
             var bankScope = this;
 
             // Setup on state chnage.
             $scope.$on("$stateChangeSuccess", function (event, toState, toParams, fromState, fromParams) {
-              
+
             });
-           
+
+            bankScope.onTabChange = function (selectedTab) {
+
+                switch (selectedTab)
+                {
+                    case 1: $state.go("BankHome"); break;
+                    case 2: $state.go("BankHome.DepositHome");  break;
+                    case 3: $state.go("BankHome.LoanHome"); break;
+                    case 4: $state.go("BankHome.ReportHome"); break;
+                }
+            };
+
         }
-      
+
+        onTabChange: (selectedTab: number) => void;
+
     }
 
     app.controller('BankCtrl', BankCtrl);

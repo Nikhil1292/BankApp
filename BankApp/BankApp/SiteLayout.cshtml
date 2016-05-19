@@ -22,20 +22,20 @@
         <div ng-controller="BankCtrl as bankScope">
 
             <md-content class="md-padding">
-                <md-tabs md-selected="selectedIndex" md-border-bottom md-autoselect>
-                    <md-tab label="Home">
+                <md-tabs md-selected="selectedIndex" md-border-bottom md-dynamic-height md-autoselect>
+                    <md-tab label="Home" md-on-select="bankScope.onTabChange(1)" >
                         
                     </md-tab>
 
-                    <md-tab label="Deposit">
+                    <md-tab label="Deposit" md-on-select="bankScope.onTabChange(2)">
                        
                     </md-tab>
 
-                    <md-tab label="Loan">
+                    <md-tab label="Loan" md-on-select="bankScope.onTabChange(3)">
                       
                     </md-tab>
 
-                    <md-tab label="Report">
+                    <md-tab label="Report" md-on-select="bankScope.onTabChange(4)">
                        
                     </md-tab>
                    
