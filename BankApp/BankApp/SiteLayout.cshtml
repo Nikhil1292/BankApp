@@ -2,7 +2,8 @@
 
 <head>
     <link href="~/css/angular-material.min.css" rel="stylesheet" />
-  
+    <link href="~/css/angular-material-sidemenu.css" rel="stylesheet" />
+
     <script src="~/scripts/angular.min.js"></script>
     <script src="~/scripts/angular-aria.min.js"></script>
     <script src="~/scripts/angular-animate.min.js"></script>
@@ -13,7 +14,8 @@
     <script src="~/components/deposits/deposit.js"></script>
 
     <script src="~/scripts/angular-material.min.js"></script>
-  
+    <script src="~/scripts/angular-material-sidemenu.js"></script>
+
 </head>
 
 <body>
@@ -21,34 +23,61 @@
 
         <div ng-controller="BankCtrl as bankScope">
 
-            <md-content class="md-padding">
-                <md-tabs md-selected="selectedIndex" md-border-bottom md-dynamic-height md-autoselect>
-                    <md-tab label="Home" md-on-select="bankScope.onTabChange(1)" >
-                        
-                    </md-tab>
+            @*<md-content class="md-padding">
+                    <md-tabs md-selected="selectedIndex" md-border-bottom md-dynamic-height md-autoselect>
+                        <md-tab label="Home" md-on-select="bankScope.onTabChange(1)" >
 
-                    <md-tab label="Deposit" md-on-select="bankScope.onTabChange(2)">
-                       
-                    </md-tab>
+                        </md-tab>
 
-                    <md-tab label="Loan" md-on-select="bankScope.onTabChange(3)">
-                      
-                    </md-tab>
+                        <md-tab label="Deposit" md-on-select="bankScope.onTabChange(2)">
 
-                    <md-tab label="Report" md-on-select="bankScope.onTabChange(4)">
-                       
-                    </md-tab>
-                   
-                </md-tabs>
+                        </md-tab>
 
-            </md-content>
+                        <md-tab label="Loan" md-on-select="bankScope.onTabChange(3)">
 
-            <div ui-view="Content">
+                        </md-tab>
+
+                        <md-tab label="Report" md-on-select="bankScope.onTabChange(4)">
+
+                        </md-tab>
+
+                    </md-tabs>
+
+                </md-content>*@
+
+            <div class="main-container" layout="row" flex>
+                <md-sidenav class="main-sidenav md-sidenav-left" md-component-id="navigation-drawer" md-is-locked-open="true" layout="column">
+                    <md-content md-scroll-y flex layout="column">
+                        <md-sidemenu locked="true">
+                            <md-sidemenu-group>
+                                <md-subheader class="md-no-sticky">Menu</md-subheader>
+                                <md-sidemenu-content md-icon="settings" md-heading="Home">
+                                </md-sidemenu-content>
+                                <md-sidemenu-content md-heading="Deposit" md-arrow="true">
+                                </md-sidemenu-content>
+                                <md-sidemenu-content md-heading="Loan" md-arrow="true">                            
+                                </md-sidemenu-content>
+                                <md-sidemenu-content md-heading="Report" md-arrow="true">
+                                </md-sidemenu-content>
+                            </md-sidemenu-group>
+                         
+                            @*<md-sidemenu-group>
+                                <md-divider></md-divider>
+                                <md-subheader class="md-no-sticky">Caption</md-subheader>
+                                <md-sidemenu-button href="#">Menu 5</md-sidemenu-button>
+                                <md-sidemenu-button href="#">Menu 6</md-sidemenu-button>
+                            </md-sidemenu-group>*@
+                        </md-sidemenu>
+                    </md-content>
+                </md-sidenav>
+
+                <div ui-view="Content">
+
+                </div>
 
             </div>
 
         </div>
-
     </div>
 </body>
 

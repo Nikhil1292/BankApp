@@ -124,6 +124,7 @@
     <Content Include="components\deposits\deposit.html" />
     <Content Include="components\home\home.html" />
     <Content Include="components\loans\loan.html" />
+    <Content Include="css\angular-material-sidemenu.css" />
     <Content Include="css\angular-material.min.css" />
     <Content Include="packages.config">
       <SubType>Designer</SubType>
@@ -141,6 +142,7 @@
     <Content Include="scripts\angular-csp.css" />
     <Content Include="scripts\angular-loader.js" />
     <Content Include="scripts\angular-loader.min.js" />
+    <Content Include="scripts\angular-material-sidemenu.js" />
     <Content Include="scripts\angular-material.min.js" />
     <Content Include="scripts\angular-messages.js" />
     <Content Include="scripts\angular-messages.min.js" />

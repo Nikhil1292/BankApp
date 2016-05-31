@@ -9,13 +9,13 @@
 
 */
 
-var app = angular.module('bankApp', ['ngRoute', 'ui.router', 'ngMaterial']);
-app.config(['$routeProvider', '$provide', '$httpProvider', '$locationProvider', '$stateProvider', '$urlRouterProvider', function ($routeProvider, $provide, $httpProvider, $locationProvider, $stateProvider, $urlRouterProvider) {
+var app = angular.module('bankApp', ['ngRoute', 'ui.router', 'ngMaterial','ngMaterialSidemenu']);
+app.config(['$routeProvider', '$provide', '$httpProvider', '$locationProvider', '$stateProvider', '$urlRouterProvider', '$mdThemingProvider', function ($routeProvider, $provide, $httpProvider, $locationProvider, $stateProvider, $urlRouterProvider, $mdThemingProvider) {
 
     // By default go to the fist page i.e Home page of app.
     $urlRouterProvider.otherwise('/');
 
-    $stateProvider.state('BankHome', {
+       $stateProvider.state('BankHome', {
         url: "/",
         views: {
             "Content@": {
